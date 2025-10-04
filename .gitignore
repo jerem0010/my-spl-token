@@ -1,0 +1,24 @@
+# Anchor & Solana
+.anchor/
+test-ledger/
+target/
+**/*.rs.bk
+
+# Node / TypeScript
+node_modules/
+dist/
+.yarn/
+
+# MacOS
+.DS_Store
+
+# Env / secrets
+.env
+*.keypair.json
+
+# IDE / editor configs
+.vscode/
+.idea/
+
+# Optional: logs
+*.log
