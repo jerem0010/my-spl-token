@@ -7,7 +7,7 @@ declare_id!("ToKeN111111111111111111111111111111111111111");
 pub mod my_spl_token {
     use super::*;
 
-    /// 🚀 Initialise un nouveau token SPL
+    /// Initialise un nouveau token SPL
     pub fn initialize_mint(ctx: Context<InitializeMint>, decimals: u8) -> Result<()> {
         let mint = &mut ctx.accounts.mint;
         mint.decimals = decimals;
@@ -16,7 +16,7 @@ pub mod my_spl_token {
         Ok(())
     }
 
-    /// 🪙 Mint de nouveaux tokens vers un compte
+    /// Mint de nouveaux tokens vers un compte
     pub fn mint_tokens(ctx: Context<MintTokens>, amount: u64) -> Result<()> {
         token::mint_to(
             CpiContext::new(
@@ -32,7 +32,7 @@ pub mod my_spl_token {
         Ok(())
     }
 
-    /// 🔥 Burn des tokens depuis un compte
+    /// Burn des tokens depuis un compte
     pub fn burn_tokens(ctx: Context<BurnTokens>, amount: u64) -> Result<()> {
         token::burn(
             CpiContext::new(
